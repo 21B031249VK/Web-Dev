@@ -1,0 +1,14 @@
+<h2>Product Details</h2>
+
+<div *ngIf="product">
+  <h3>{{ product.name }}</h3>
+  <img [src]="product.image" [alt]="product.name + '-image'" width="100px" />
+
+  <p *ngIf="product.rating">Rating: {{ product.rating }} ★</p>
+  <p *ngIf="product.price">Cost: {{ product.price }} ₸</p>
+  <p>{{ product.description }}</p>
+  <button type="button" (click)="addToCart(product)">Buy</button>
+  <a [title]="product.name + ' in Kaspi.kz'" (click)="openProduct(product.link)">
+    Sourse
+    </a>
+</div>
