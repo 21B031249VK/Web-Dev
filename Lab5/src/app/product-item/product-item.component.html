@@ -1,0 +1,142 @@
+<div *ngFor="let product of products">
+    <div *ngIf = "product.isActive && (product.categoryId == product.currentCategory || product.currentCategory == -1)">
+
+      <h1>
+        <a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
+          {{ product.name }}
+        </a>
+      </h1>
+
+      <img  class = 'images' src="{{ product.image1 }}" width="140px" />
+<!--      <img  class = "images" src="{{ product.image2 }}" width="140px" />
+      <img  class = "images" src="{{ product.image3 }}" width="140px" /> -->
+
+      <h3 *ngIf="product.price"> Price: {{product.price}} ₸</h3>
+      <p *ngIf="product.description">Description: {{ product.description }}</p>
+
+      <span class="rating">User Rating</span>
+
+      <p *ngIf="product">
+        {{((product.rates1
+        + product.rates2*2
+        + product.rates3*3
+        + product.rates4*4
+        + product.rates5*5)/(product.rates1
+                            + product.rates2
+                            + product.rates3
+                            + product.rates4
+                            + product.rates5)).toPrecision(2)}}
+        average based on
+        {{product.rates1 +
+      product.rates2 +
+      product.rates3 +
+      product.rates4 +
+      product.rates5}}
+        reviews.</p>
+
+      <hr style="border:3px solid #f1f1f1">
+
+      <div class="row">
+        <div class="side">
+          <div>5 stars</div>
+        </div>
+        <div class="middle">
+          <div class="bar-container">
+            <div class="bar-5" *ngFor="let bar5 of [((product.rates5*100/(product.rates1+product.rates2+product.rates3+product.rates4+product.rates5))+'%').toString()]" style="--size:{{bar5}}"></div>
+          </div>
+        </div>
+        <div class="side right">
+          <div *ngIf="product.rates5">{{product.rates5}}</div>
+        </div>
+
+
+        <div class="side">
+          <div>4 stars</div>
+        </div>
+        <div class="middle">
+          <div class="bar-container">
+            <div class="bar-4" *ngFor="let bar4 of [((product.rates4*100/(product.rates1+product.rates2+product.rates3+product.rates4+product.rates5))+'%').toString()]" style="--size:{{bar4}}"></div>
+          </div>
+        </div>
+        <div class="side right">
+          <div *ngIf="product.rates4">{{product.rates4}}</div>
+        </div>
+
+
+        <div class="side">
+          <div>3 stars</div>
+        </div>
+        <div class="middle">
+          <div class="bar-container">
+            <div class="bar-3" *ngFor="let bar3 of [((product.rates3*100/(product.rates1+product.rates2+product.rates3+product.rates4+product.rates5))+'%').toString()]" style="--size:{{bar3}}"></div>
+          </div>
+        </div>
+        <div class="side right">
+          <div *ngIf="product.rates3">{{product.rates3}}</div>
+        </div>
+        <div class="side">
+
+
+          <div>2 stars</div>
+        </div>
+        <div class="middle">
+          <div class="bar-container">
+            <div class="bar-2" *ngFor="let bar2 of [((product.rates2*100/(product.rates1+product.rates2+product.rates3+product.rates4+product.rates5))+'%').toString()]" style="--size:{{bar2}}"></div>
+          </div>
+        </div>
+        <div class="side right">
+          <div *ngIf="product.rates2">{{product.rates2}}</div>
+        </div>
+        <div class="side">
+
+
+          <div>1 star</div>
+        </div>
+        <div class="middle">
+          <div class="bar-container">
+            <div class="bar-1" *ngFor="let bar1 of [((product.rates1*100/(product.rates1+product.rates2+product.rates3+product.rates4+product.rates5))+'%').toString()]" style="--size:{{bar1}}"></div>
+          </div>
+        </div>
+        <div class="side right">
+          <div *ngIf="product.rates1">{{product.rates1}}</div>
+        </div>
+      </div>
+
+      <br><br>
+
+      <button class="btn" (click)="shareTg(product.url)">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png"
+          alt="telegram-share"
+          width="40px"
+        />
+      </button>
+      <button class="btn" (click)="shareWp(product.url)">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png"
+          alt="whatsapp-share"
+          width="40px"
+        />
+      </button>
+
+      <button class="btn" type="button" (click)="delete(product)">
+        <img
+          src = "https://cdn-icons-png.flaticon.com/512/1345/1345874.png"
+          alt = "like"
+          width = "40px"
+        />
+      </button>
+
+      <button class="btn" type="button" (click)="like(product)">
+        <img
+          src = "https://www.freeiconspng.com/thumbs/facebook-love-png/facebook-love-png-3.png"
+          alt = "like"
+          width = "40px"
+          />
+      </button>
+
+      <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
+
+      <p class = "likes">Likes : {{product.likes}}</p>
+    </div>
+  </div>
