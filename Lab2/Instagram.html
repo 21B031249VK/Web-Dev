@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram</title>
+    <style>
+        body{
+            background-color: #FAFAFA;
+            width: 100%;
+            justify-content: center;
+            margin-top: 60px;
+            display: flex;
+            align-items: center;
+            font-family: sans-serif;
+            font-size: 14px;
+            flex-direction: column;
+        }
+        .upper-block{
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+        .login {
+            height: 400px;
+            padding-top: 30px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 350px;
+            font-family: sans-serif;
+            font-size: 14px;
+            justify-content: space-between;
+            border: 1px solid rgb(219, 219, 219);
+        }
+        .login input {
+            width: 260px;
+            height: 35px;
+            padding-left: 10px;
+            font-size: 13px;
+            margin-top: -15px;
+        }
+        .login button{
+            border-radius: 7px;
+            height: 30px;
+            border: none;
+            background-color: rgb(0, 149, 246);
+            color: white;
+            opacity: 0.7;
+            font-weight: bold;
+            margin-top: 3px;
+            width: 270px;
+            cursor: pointer;
+        }
+
+        .input{
+            border: 1px solid rgb(219, 219, 219);
+            background-color: #FAFAFA;
+        }
+
+        .line {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .part-line {
+            border-top: 2px solid rgb(219, 219, 219);
+            width: 50px;
+            padding-left: 50px;
+        }
+        .option {
+            padding-left: 20px;
+            padding-right: 20px;
+            color: rgb(142, 142, 142);
+            font-size: 0.8125rem;
+            font-family: sans-serif;
+        }
+        .facebook {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 180px;
+            align-items: center;
+            color: #385185;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .forgot{
+            font-size: 12px;
+            text-decoration: none;
+            color: rgb(0, 55, 107);
+            padding-bottom: 20px;
+            font-family: sans-serif;
+        }
+        .signup{
+            height: 60px;
+            justify-content: center;
+            margin-top: 10px;
+            border: 1px solid rgb(219, 219, 219);
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 350px;
+            font-size: 14px;
+            background-color: white;
+        }
+        .download{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 350px;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+
+        ul {
+            margin-top: 100px;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            color: rgb(142, 142, 142);
+            font-size: 12px;
+            width: 85%;
+        }
+
+        li {
+            padding: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class = "upper-block">
+    <img src = "Снимок.PNG" alt = "phone">
+    <div class = "main">
+        <div class = "login">
+            <img src = "instlogo.PNG" alt = "logo">
+            <input class = "input" type = "email" placeholder = "Телефон, имя пользователя или эл. адрес">
+            <input class = "input" type = "password" placeholder = "Пароль">
+            <button class = "sign-in">Вход</button>
+            <div class = "line">
+                <div class="part-line"></div>
+                <div class="option">ИЛИ</div>
+                <div class="part-line"></div>
+            </div>
+            <a class = "facebook" href="">
+                <img src="fb.PNG" alt = "facebook">
+                <p>Войти через Facebook</p>
+            </a>
+            <a class = "forgot" href="">Забыли пароль?</a>
+        </div>
+        <div class = "signup">
+            <p>У вас ещё нет аккаунта? <a href="">Зарегистрироваться</a></p>
+        </div>
+        <div class = "download">
+            <p>Установите приложение.</p>
+            <img src="ms.PNG" alt="gp-ms">
+        </div>
+    </div>
+</div>
+
+<div>
+    <ul>
+        <li>Meta</li>
+        <li>Информация</li>
+        <li>Блог</li>
+        <li>Вакансии</li>
+        <li>Помощь</li>
+        <li>API</li>
+        <li>Конфиденциальность</li>
+        <li>Условия</li>
+        <li>Популярные аккаунты</li>
+        <li>Места</li>
+        <li>Instagram Lite</li>
+        <li>Загрузка контактов и лица, не являющиеся пользователями</li>
+        <li>Русский</li>
+        <li>© 2023 Instagram from Meta</li>
+    </ul>
+</div>
+</body>
+</html>

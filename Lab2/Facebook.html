@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Facebook</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background: #f0f2f5;
+            font-family: Arial, sans-serif;
+        }
+        .upper-block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+        .hello-block{
+            width: 500px;
+        }
+        .hello-block img {
+            width: 235px;
+            margin-bottom: -10px;
+        }
+        .hello-block h2 {
+            color: #000;
+            font-size: 26px;
+            font-weight: normal;
+            line-height: 32px;
+        }
+
+
+        .login-form{
+            width: 350px;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            background: #fff;
+            margin-left: 60px;
+            box-shadow: 0px 2px 10px 1px rgba(71, 71, 71, 0.52);
+        }
+
+        .login-form input {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 15px;
+            font-size: 18px;
+            box-sizing: border-box;
+            border: 1px solid #eeebeb;
+            border-radius: 5px;
+            outline: none;
+        }
+        .login-form input:focus {
+            box-shadow: 0px 0px 1px 1px rgb(22, 111, 229);
+        }
+        .sign-in {
+            width: 100%;
+            margin-bottom: 15px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 5px;
+            border: none;
+            padding: 13px 0;
+            cursor: pointer;
+            background: #166fe5;
+        }
+        .sign-in:hover{
+            background: #1877f2;
+        }
+        .login-form a {
+            color: #166fe5;
+            font-size: 14px;
+            text-decoration: none;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .login-form a:hover {
+            text-decoration: underline;
+        }
+        .login-form hr {
+            border: 1px solid #dadde1;
+            margin-bottom: 15px;
+        }
+        .sign-up{
+            width: 100%;
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 5px;
+            border: none;
+            background: #36a420;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        .sign-up:hover {
+            background: #42b72a;
+        }
+        .line {
+            border-top: 1px solid #dadde1;
+            width: 350px;
+            margin-bottom: 30px;
+            margin-top: 10px;
+        }
+        .create-acc {
+            width: 395px;
+            text-align: center;
+            font-size: 14px;
+            margin-left: 50px;
+        }
+
+
+        .bottom-block {
+            width: auto;
+            text-align: center;
+            font-size: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: white;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .languages {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            width: auto;
+            justify-content: space-between;
+        }
+
+        .bottom-line {
+            width: 950px;
+            margin-top: -5px;
+        }
+
+        .services {
+            display: flex;
+            flex-direction: row;
+            width: 1000px;
+            flex-wrap: wrap;
+            margin-top: -15px;
+        }
+
+        li {
+            color: #737373;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 5px;
+        }
+
+        .cred {
+            color: #737373;
+            margin-left: 485px;
+        }
+
+        .plus {
+            width: 30px;
+            height: 20px;
+            margin-top: -5px;
+            border: 1px solid #737373;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+<div class = "upper-block">
+    <div class = "hello-block">
+        <img src = "https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt = "facebook-logo">
+        <h2>Facebook помогает вам всегда оставаться на связи и общаться со своими знакомыми.</h2>
+    </div>
+    <div class = "login-block">
+        <form class = login-form>
+            <input type = "email" placeholder = "Электронный адрес или номер телефона">
+            <input type = "password" placeholder = "Пароль">
+            <button class = "sign-in">Вход</button>
+            <a href = "">Забыли пароль?</a>
+            <div class = "line"></div>
+            <button class = "sign-up">Создать новый аккаунт</button>
+        </form>
+        <p class = "create-acc"><a href = ""><strong>Создать Страницу</strong></a> знаменитости, музыкальной группы или компании.</p>
+    </div>
+</div>
+<div class = "bottom-block">
+    <ul class="languages">
+        <li>Русский</li>
+        <li>English (US)</li>
+        <li>Türkçe</li>
+        <li>Bahasa Indonesia</li>
+        <li>中文(简体)</li>
+        <li>Қазақша</li>
+        <li>Deutsch</li>
+        <li>한국어</li>
+        <li>Shqip</li>
+        <li>Español</li>
+        <li>Português (Brasil)</li>
+        <li><button class="plus">+</button></li>
+    </ul>
+    <div class="line bottom-line"></div>
+    <ul class="services">
+        <li>Регистрация</li>
+        <li>Вход</li>
+        <li>Messenger</li>
+        <li>Facebook Lite</li>
+        <li>Watch</li>
+        <li>Места</li>
+        <li>Игры</li>
+        <li>Marketplace</li>
+        <li>Meta Pay</li>
+        <li>Oculus</li>
+        <li>Portal</li>
+        <li>Instagram</li>
+        <li>Bulletin</li>
+        <li>Благотворительные акции</li>
+        <li>Услуги</li>
+        <li>Центр информации о выборах</li>
+        <li>Политика конфиденциальности</li>
+        <li>Центр конфиденциальности</li>
+        <li>Группы</li>
+        <li>Информация</li>
+        <li>Создать рекламу</li>
+        <li>Создать Страницу</li>
+        <li>Разработчикам</li>
+        <li>Вакансии</li>
+        <li>Файлы cookie</li>
+        <li>Рекламные предпочтения</li>
+        <li>Условия использования</li>
+        <li>Справка</li>
+        <li>Загрузка контактов и лица, не являющиеся пользователями</li>
+    </ul>
+    <p class="cred">Meta @2023</p>
+</div>
+</body>
+</html>

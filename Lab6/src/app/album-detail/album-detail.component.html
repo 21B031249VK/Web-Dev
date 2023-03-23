@@ -1,0 +1,21 @@
+<div *ngIf="loaded">
+  <div>
+    <h1>User Id #{{album.userId}}</h1>
+    <h2>Album detail #{{album.id}}</h2>
+    <h2>Title: {{album.title}}</h2>
+
+    <fieldset>
+      <h3>Edit title:</h3>
+      <input id = "titleInput" value="{{album.title}}" [(ngModel)]="editedAlbum.title">
+      <button id = "saveBtn" (click)="editAlbum()">Save</button>
+    </fieldset>
+  </div>
+  <div>
+    <button class = "footerBtn" routerLink="/albums/{{album.id}}/photos">Photos</button>
+    <button class = "footerBtn" routerLink="">Return back</button>
+  </div>
+</div>
+<h3 *ngIf="!loaded">Album is loading...</h3>
+
+
+
